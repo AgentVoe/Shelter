@@ -6,7 +6,35 @@ using System.Threading.Tasks;
 
 namespace Shelter.Classes
 {
-	internal class Users
+	public class Users
 	{
-	}
+		private string login;
+		private string password;
+		private string role;
+		// Предполагается, что свойства будут реализовывать валидацию
+		public string Login
+		{
+			get => login;
+			set => login = value;
+		}
+
+		public string Password
+		{
+			get => password;
+			set => password = value;
+		}
+
+		public string Role
+		{
+			get => role;
+			set => role = value;
+		}
+
+        public Users(string login, string password, string role)
+        {
+			Login = login;
+			Password = password;
+			Role = role;
+        }
+    }
 }
