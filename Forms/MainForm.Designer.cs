@@ -28,20 +28,20 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			button1 = new Button();
+			btnChooseOrg = new Button();
 			button2 = new Button();
 			button3 = new Button();
 			button4 = new Button();
 			SuspendLayout();
 			// 
-			// button1
+			// btnChooseOrg
 			// 
-			button1.Location = new Point(214, 56);
-			button1.Name = "button1";
-			button1.Size = new Size(221, 53);
-			button1.TabIndex = 0;
-			button1.Text = "Реестр Организаций";
-			button1.UseVisualStyleBackColor = true;
+			btnChooseOrg.Location = new Point(214, 56);
+			btnChooseOrg.Name = "btnChooseOrg";
+			btnChooseOrg.Size = new Size(221, 53);
+			btnChooseOrg.TabIndex = 0;
+			btnChooseOrg.Text = "Реестр Организаций";
+			btnChooseOrg.UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
@@ -74,11 +74,11 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(640, 388);
 			Controls.Add(button4);
 			Controls.Add(button3);
 			Controls.Add(button2);
-			Controls.Add(button1);
+			Controls.Add(btnChooseOrg);
 			Name = "MainForm";
 			Text = "Главная Страница";
 			ResumeLayout(false);
@@ -86,7 +86,7 @@
 
 		#endregion
 
-		private Button button1;
+		private Button btnChooseOrg;
 		private Button button2;
 		private Button button3;
 		private Button button4;
