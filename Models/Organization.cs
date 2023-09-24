@@ -1,26 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Shelter.Classes
+namespace Shelter.Models;
+
+public partial class Organization
 {
-    public class Organization
-    {
-        public string orgname; // наиманование организации
-        public int inn; // номер ИНН
-        public int kpp; // номер КПП
-        public string adress; // адрес организации
-        public string orgtype; // тип организации
-        public string ipyyr; // ип или юр лицо
+    public int Id { get; set; }
 
-        public string Orgname { get => orgname; set => orgname = value; }
-        public int Inn { get => inn; set => inn = value; }
-        public int Kpp { get => kpp; set => kpp = value; }
-        public string Adress { get => adress; set => adress = value; }
-        public string Orgtype { get => orgtype; set => orgtype = value; }
-        public string Ipyyr { get => ipyyr; set => ipyyr = value; }
-    }
+    public string? Title { get; set; }
+
+    public string? Inn { get; set; }
+
+    public string? Kpp { get; set; }
+
+    public string? Address { get; set; }
+
+    public int? Tid { get; set; }
+
+    public bool? Ip { get; set; }
+
+    public bool? Ur { get; set; }
+
+    public virtual ICollection<Act> Acts { get; set; } = new List<Act>();
+
+    public virtual ICollection<Contract> ContractIcs { get; set; } = new List<Contract>();
+
+    public virtual ICollection<Contract> ContractZcs { get; set; } = new List<Contract>();
+
+    public virtual Type? TidNavigation { get; set; }
 }
