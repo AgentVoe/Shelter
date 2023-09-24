@@ -4,25 +4,28 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shelter.Views
 {
-	public partial class Main : Form
+	public partial class ContractCard : Form
 	{
-		private Contracts contracts;
-		public Main()
+		public ContractCard()
 		{
 			InitializeComponent();
-
 		}
 
-		private void button3_Click(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
-			contracts = new Contracts();
-			contracts.Show();
+			this.DialogResult = DialogResult.OK;
+		}
+		
+		public string ReturnData()
+		{
+			return "1";
 		}
 	}
 }
